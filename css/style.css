@@ -1,0 +1,448 @@
+html{
+    height: 100%;
+    width: 100%;
+    font-family: "ABeeZee";
+}
+
+body{
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    background-color: #22272e;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, p, h2{
+    margin: 0;
+    padding: 0;
+}
+
+article{
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: .5em;
+}
+
+section{
+    border-top: 1px solid #808080;
+}
+
+.nav{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.is_open{
+    pointer-events: all;
+}
+
+.nav-container{
+    position: relative;
+}
+
+.menu-button{
+    pointer-events: all;
+    position: fixed;
+    background-color: #768390;
+    border: none;
+    border-radius: 10px;
+    margin: 40px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: font-size .1s;
+    z-index: 1;
+}
+
+.menu-button:hover{
+    font-size: 25px;
+}
+
+.third-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.x-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.nav-contents{
+    position: absolute;
+    background-color: #22272e;
+    height: 100%;
+    width: 100%;
+    font-size: 3rem;
+}
+
+.nav-links{
+    position: relative;
+    top: calc( 50% - 300px / 2 );
+    text-align: center;
+}
+
+.home-link{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5em;
+}
+
+.home-text{
+    position: relative;
+    color: #768390;
+}
+
+.home-text::after{
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 2px;
+    bottom: -1px;
+    background: #768390;
+    width: 0%;
+    transition: width .4s;
+}
+
+.home-text:hover::after{
+    width: 100%;
+}
+
+.about-link{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5em;
+}
+
+.about-text{
+    color: #768390;
+    position: relative;
+}
+
+.about-text::after{
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 2px;
+    bottom: -1px;
+    background: #768390;
+    width: 0%;
+    transition: width .4s;
+}
+
+.about-text:hover::after{
+    width: 100%;
+}
+
+.works-link{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5em;
+}
+
+.works-text{
+    color: #768390;
+    position: relative;
+}
+
+.works-text::after{
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 2px;
+    bottom: -1px;
+    background: #768390;
+    width: 0%;
+    transition: width .4s;
+}
+
+.works-text:hover::after{
+    width: 100%;
+}
+
+.contact-link{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: .5em;
+}
+
+.contact-text{
+    color: #768390;
+    position: relative;
+}
+
+.contact-text::after{
+    position: absolute;
+    left: 0;
+    content: "";
+    height: 2px;
+    bottom: -1px;
+    background: #768390;
+    width: 0%;
+    transition: width .4s;
+}
+
+.contact-text:hover::after{
+    width: 100%;
+}
+
+.nav .active{
+    opacity: 100%;
+    visibility: visible;
+    pointer-events: all;
+    transition: all .5s;
+}
+
+.nav .non-active{
+    opacity: 0%;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.home{
+    width: 100%;
+    height: 100%;
+}
+
+.home .name{
+    color: #fff;
+    font-size: 7rem;
+    letter-spacing: .25em;
+}
+
+.home .catch{
+    color: #768390;
+    font-size: 2rem;
+}
+
+.home div{
+    text-align: center;
+    position: relative;
+    top: calc( 50% - 170px / 2 );
+}
+
+.section-container{
+    /* position: relative;
+    top: 5%; */
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.section-title{
+    text-align: center;
+    font-weight: normal;
+    color: #768390;
+    font-size: 3rem;
+    margin-bottom: 1.5em;
+}
+
+.section-title::before, .section-title::after{
+    content: '―';
+}
+
+.about-article{
+    text-align: center;
+}
+
+.about-name{
+    font-size: 2em;
+    margin-right: 0.3em;
+}
+
+.about-description{
+    margin: 20px auto 0 auto;
+    font-size: 1em;
+    width: 70%;
+}
+
+.about-title::before{
+    content: "【";
+}
+
+.about-title::after{
+    content: "】";
+}
+
+.about-use{
+    margin-top: 30px;
+}
+
+.use-title{
+    margin-top: 30px;
+    color: #768390;
+}
+
+.use-title::before {
+    content: "<";
+}
+
+.use-title::after{
+    content: ">";
+}
+
+.use-list{
+    letter-spacing: 0.3em;
+}
+
+.about-learning{
+    margin-top: 30px;
+}
+
+.learning{
+    margin-top: 30px;
+    letter-spacing: 0.3em;
+}
+
+.about-certification{
+    margin-top: 30px;
+}
+
+.certification{
+    margin-top: 30px;
+    letter-spacing: 0.3em;
+}
+
+#works{
+    text-align: center;
+}
+
+.works-title{
+    margin: 70px 0 30px 0;
+    font-weight: normal;
+}
+
+.works-title::before, .works-title::after{
+    content: "～";
+}
+
+.portfolio-image{
+    width: 50%;
+    border: 3px solid #fff;
+}
+
+.kyujinhyou-image{
+    width: 50%;
+    border: 3px solid #fff;
+}
+
+.mattermost-image{
+    width: 50%;
+    border: 3px solid #fff;
+}
+
+.works-description-container{
+    margin-top: 30px;
+}
+
+.works-description{
+    letter-spacing: .3em;
+}
+
+.used{
+    margin-top: 20px;
+}
+
+#contacts .section-container{
+    padding-bottom: 20%;
+}
+
+.links{
+    text-align: center;
+}
+
+.links-span{
+    display: inline-block;
+}
+
+.links-span:nth-of-type( -n + 3 ){
+    margin-right: 3em;
+}
+
+.twitter-icon{
+    color: #1d9bf0;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.github-icon{
+    color: #fff;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.crowdworks-link{
+    width: 3em;
+}
+
+.crowdworks-icon{
+    vertical-align: bottom;
+    width: 3em;
+    border-radius: 7px;
+}
+
+.lancers-link{
+    width: 3em;
+}
+
+.lancers-icon{
+    vertical-align: bottom;
+    width: 3em;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 450px){
+
+    .menu-button{
+        width: 40px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .menu-button:hover{
+        font-size: 15px;
+    }
+
+    .section-title{
+        font-size: 2em;
+    }
+
+    article{
+        font-size: .9em;
+    }
+
+    .works-description, .used {
+        font-size: .5em;
+        letter-spacing: .5em;
+    }
+
+    .used{
+        max-width: 100%;
+    }
+}
