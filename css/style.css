@@ -357,6 +357,17 @@ section{
     border: 3px solid #fff;
 }
 
+.quote{
+    letter-spacing: normal;
+    text-align: right;
+    margin-right: 25%;
+    font-size: .7em;
+}
+
+.mattermost-quote{
+    color: #888;
+}
+
 .works-description-container{
     margin-top: 30px;
 }
